@@ -60,29 +60,32 @@ export function Board(){
     </div>
   )
 }
+
 function hasWon(board: string[]) : string{
   
-  //check horisontal
+  //check horizontal
   for(var i = 0; i < 3; i++){
-    if(board[i] != 'N' && board[i] === board[i + 1] && board[i + 1] === board[i + 2]){
-      return board[i]
+    if(board[i*3] !== 'N' && board[i*3] === board[i*3 + 1] && board[i*3 + 1] === board[i*3 + 2]){
+      return board[i*3];
     }
   }
 
   //check vertical
   for(var i = 0; i < 3; i++){
-    if(board[i] != 'N' && board[i] === board[i + 3] && board[i + 3] === board[i + 6]){
-      return board[i]
+    if(board[i] !== 'N' && board[i] === board[i + 3] && board[i + 3] === board[i + 6]){
+      return board[i];
     }
   }
 
   //check diagonals
-  if(board[0] != 'N' && board[0] === board[4] && board[4] === board[8]){
-    return board[0]
+  if(board[0] !== 'N' && board[0] === board[4] && board[4] === board[8]){
+    return board[0];
   }
-  if(board[2] != 'N' && board[2] === board[4] && board[4] === board[6]){
-    return board[6]
+  if(board[2] !== 'N' && board[2] === board[4] && board[4] === board[6]){
+    return board[2];
   }
 
-  return 'N'
+  return 'N';
 }
+
+
