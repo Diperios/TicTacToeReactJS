@@ -12,7 +12,8 @@ export default function App() {
         left: '50%',
         top: '30%',
         transform: 'translate(-50%, -50%)',
-    }}>
+    }}
+    >
       <h1>Tic Tac Toe</h1>
       <p>this is a tic tac toe game</p>
       <Board />
